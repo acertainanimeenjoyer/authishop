@@ -138,3 +138,11 @@ button:hover {
   background-color: #1a1a1a;
 }
 
+.theme-toggle {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}

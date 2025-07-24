@@ -10,19 +10,23 @@ import Navbar from './components/Navbar';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev);
+  };
+
   return (
     <CartProvider>
-      <Router>
-        <div className={darkMode ? 'dark-theme' : 'light-theme'}>
-          <Navbar darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)} />
+      <div className={darkMode ? 'app dark' : 'app'}>
+        <BrowserRouter>
+          <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
-        </div>
-      </Router>
+        </BrowserRouter>
+      </div>
     </CartProvider>
   );
 }

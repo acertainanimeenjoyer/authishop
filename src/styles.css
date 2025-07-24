@@ -106,3 +106,35 @@ button {
 button:hover {
   background-color: #003366;
 }
+
+/* Default (light theme) */
+.app {
+  background-color: #f0f4fa;
+  color: #1a1a1a;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+.app.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Dark navbar */
+.app.dark .navbar {
+  background-color: #1e1e2f;
+}
+
+/* Dark product cards */
+.app.dark .product-card {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+  border-color: #333;
+}
+
+/* Optional dark table rows */
+.app.dark .cart-table tr {
+  background-color: #1a1a1a;
+}
+

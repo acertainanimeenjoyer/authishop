@@ -85,11 +85,20 @@
   margin: 1rem 0;
 }
 
+/* Light Theme (default) */
 .checkout-list li {
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   background: #f9f9f9;
+  color: #1a1a1a;
   border-left: 4px solid #1f4e9b;
+}
+
+/* Dark Theme override */
+.app.dark .checkout-list li {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border-left-color: #90caf9; /* lighter blue accent */
 }
 
 button {
